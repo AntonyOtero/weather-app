@@ -1,11 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans&display=swap');
 
 :root {
-  /* fonts */
+  /* fonts - families*/
   --fonts-family-mono: 'IBM Plex Mono', monospace;
   --fonts-family-sans: 'IBM Plex Sans', sans-serif;
+  /* fonts - sizes */
+  --fonts-size-md: 16px;
+  --fonts-size-lg-mobile: 1.414rem;
+  --fonts-size-lg: 1.5rem;
+  --fonts-size-display-1-mobile: 5.643rem;
+  --fonts-size-display-1: 7.594rem;
+  /* colors */
+  --colors-copy: #f1f1f1;
+  --colors-background: #1B203D;
 }
 
 body {
   font-family: var(--fonts-family-sans);
+  font-size: var(--fonts-size-md);
+  background: var(--colors-background);
 }
