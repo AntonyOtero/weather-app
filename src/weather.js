@@ -55,7 +55,7 @@ async function displayWeather(city_name="New York", country_code="US", units="im
 
   temp.textContent = formatTemp(requiredData.temp, units);
   condition.textContent = requiredData.condition;
-  feels_like.textContent = `Feels ` + formatTemp(requiredData.feels_like);
+  feels_like.textContent = `Feels ` + formatTemp(requiredData.feels_like, units);
   icon.src = `http://openweathermap.org/img/wn/${icon_code}@2x.png`;
 
   G_CITY = city_name;
