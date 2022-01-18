@@ -10,13 +10,136 @@
   --fonts-size-lg: 1.5rem;
   --fonts-size-display-1-mobile: 5.643rem;
   --fonts-size-display-1: 7.594rem;
+  /* background */
+  --background-gradient: linear-gradient(17.61deg, #151932 0%, #272D51 100%);
   /* colors */
   --colors-copy: #f1f1f1;
-  --colors-background: #1B203D;
 }
 
 body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
   font-family: var(--fonts-family-sans);
   font-size: var(--fonts-size-md);
-  background: var(--colors-background);
+  color: var(--colors-copy);
+  background: center / cover no-repeat var(--background-gradient);
+}
+
+p {
+  margin: 0;
+}
+
+.search {
+  margin: 10px 0;
+  padding: 5px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 2px solid;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search:hover {
+  border-color: #e96e4a;
+}
+
+.search-input {
+  margin-right: 10px;
+  background: none;
+  color: var(--colors-copy);
+  border: none;
+}
+
+.search-btn {
+  cursor: pointer;
+}
+
+.search-btn svg {
+  width: 20px;
+  height: 20px;
+  color: var(--colors-copy);
+}
+
+.results {
+  display: flex;
+}
+
+.visuals {
+  margin: 0 40px 0 0;
+}
+
+.portal-lip,
+.portal-ridge,
+.portal-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.portal-lip {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135.22deg, #272D51 22.08%, #151932 85.76%);
+}
+
+.portal-ridge {
+  width: 223.33px;
+  height: 223.33px;
+  background: linear-gradient(135.22deg, #151932 22.08%, #272D51 85.76%);
+}
+
+.portal-background {
+  width: 167.5px;
+  height: 167.5px;
+  background: #1b203f;
+}
+
+.temp {
+  font-family: var(--fonts-family-mono);
+  font-size: var(--fonts-size-display-1);
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.condition,
+.feels-like {
+  font-size: var(--fonts-size-lg);
+}
+
+.feels-like {
+  opacity: 0.5;
+}
+
+@media (max-width: 750px) {
+  .results {
+    flex-direction: column;
+  }
+
+  .visuals {
+    margin: 0 0 40px;
+  }
+
+  .temp {
+    font-family: var(--fonts-family-mono);
+    font-size: var(--fonts-size-display-1-mobile);
+  }
+  
+  .condition,
+  .feels-like {
+    font-size: var(--fonts-size-lg-mobile);
+  }
+  
+  .feels-like {
+    opacity: 0.5;
+  }
 }
