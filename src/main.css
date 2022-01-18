@@ -31,6 +31,44 @@ p {
   margin: 0;
 }
 
+.search {
+  margin: 10px 0;
+  padding: 5px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 2px solid;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search:hover {
+  border-color: #e96e4a;
+}
+
+.search-input {
+  margin-right: 10px;
+  background: none;
+  color: var(--colors-copy);
+  border: none;
+}
+
+.search-btn {
+  cursor: pointer;
+}
+
+.search-btn svg {
+  width: 20px;
+  height: 20px;
+  color: var(--colors-copy);
+}
+
 .results {
   display: flex;
 }
@@ -63,13 +101,14 @@ p {
 .portal-background {
   width: 167.5px;
   height: 167.5px;
-  background: #151932;
+  background: #1b203f;
 }
 
 .temp {
   font-family: var(--fonts-family-mono);
   font-size: var(--fonts-size-display-1);
   font-weight: 300;
+  cursor: pointer;
 }
 
 .condition,
